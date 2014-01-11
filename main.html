@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>商安卫士 · 商战雷达</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <script type="text/javascript" src="include/jquery.min.js"></script>
+    <script type="text/javascript" src="include/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="include/db.js"></script>    
+    <script type="text/javascript" src="include/md5.js"></script>    
+</head>
+<body class="index">
+    <header class="row-fluid" id="header">
+        <div class="container">
+            <div id="title" class="span3">
+                <div id="logo">
+                    <a href="http://tech.bss360.com" target="_blank">
+                        商安卫士
+                        <span style="color:#ff4200">· 商战雷达</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search" class="current span7">
+                <form id="search_form" class="search-form consolidated-form"  >
+                    <div class="option">
+                        <select id="option" name="option">
+                            <option value="info" selected>企业信息</option>
+                            <option value="credit" >信用记录</option>
+                        </select>                       
+                    </div>
+                    <button class="bss-btn search-btn" id="search-btn" type="submit">
+                        <span class="button-content">搜索</span>
+                    </button>
+                    <div id="masthead-search-terms" class="search-border">
+                        <label>
+                            <input id="search_field" placeholder="输入企业名..." class="search-input" value="" type="text" autofocus></label>
+                    </div>
+                </form>
+            </div>
+
+            <div id="version" class="span2">               
+            </div>
+        </div>
+    </header> 
+
+    <div class="row-fluid" style="padding-top: 50px; ">
+        <div class="container">
+            <section id="side" class="span3">
+                <div class="mtl textc" id="product">
+                    <ul class="row-fluid">
+                        <li class="span4"><a href="#" id="funds">资金榜</a></li>
+                        <li class="span4"><a href="#" id="blacklist">黑名单</a></li>
+                        <li class="span4"><a href="#" id="credit">信用记录</a></li>
+                    </ul>
+                </div>
+                <div class="collection">
+                    <h3>♥ 收藏列表</h3>
+                    <ul>                    
+                        <section id="wordlist">
+                        </section>
+                    </ul>                              
+                </div>
+            </section>
+            <section  class="span9">
+                <div id="productBox" class="bot-l">
+                </div>
+                <div id="main" class="bot-l">
+                    <header class="ml-32 clearfix">
+                        <span id="enterprise" data-eid=""></span> 
+                        <div id="weg-score" class="pull-left ml-32">    
+                        </div>
+
+                        <i class="_switch pull-left comment-icon" title="发个评论吧！" style="display: none;"></i>
+                        <div id="Collec-btn" class="pull-right ">
+                            <div id="button_remove" class="button" title="移除收藏"></div>
+                            <div id="button_add" class="button" title="收藏企业"></div>
+                        </div>
+                        
+                    </header>
+                    <hr />    
+
+                    <section id="worddef" class="ml-32">
+                    </section>
+
+                    <div id="weg-pagination" style="display: none;">
+                        <a href="javascript:;" data-pagenum ='1' data-name =''>加载更多…</a>
+                    </div>
+                    <!-- <div class="demo" style="background-color:#222; color:#FFF;">               <input class="knob" data-width="150" data-displayprevious="true" data-fgcolor="#ffec03" data-skin="tron" data-thickness=".2" value="60">           </div> -->
+                    <!-- 评论 企业信用 tag-->
+                    <div class="wegWrap supportMedia" style="display: none;">
+                        <div class="ml-32">
+                            <h3 class="bold">企业信用记录</h3>    
+                              
+                            <div id="CrumbList" class="tag links"> 
+                                <p class="WegTip">  加载中……</p>    
+                            </div>
+                            <p class="c-gray text-r">注：如有 <em>"斜体"</em> 的信息，则仅供参考<p>
+                        </div>                        
+
+                        <ul id="tag" class="clearfix">
+                            <li class="bold">用户评论</li>                              
+                        </ul>                        
+                        <div id="tagContent">
+                            <div id="CommentList" class="tag" style="display: block;">    
+                                <p class="WegTip">  加载中……</p>                 
+                            </div>                         
+                        </div>
+                    </div>
+                     <div id="copyRrght">
+                         <p class="credits">Copyright © 2013 <a href="http://tech.bss360.com/" target="_blank">商安卫士</a>版权所有
+                         </p>
+                     </div>
+                     <div id="bubble"></div>      
+                </div>               
+            </section>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="include/common.js"></script>
+<script type="text/javascript" src="include/app.js"></script>
+<script type="text/javascript" src="include/proxy.js"></script
+</html>
